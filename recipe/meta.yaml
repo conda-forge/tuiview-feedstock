@@ -10,18 +10,18 @@ source:
     md5: e41c7641d709b7e2e51231077712b384
 
 build:
-    number: 0
+    number: 1
 
 requirements:
     build:
         - python
         - numpy
-        - gdal 2.0.2
+        - gdal 2.1.*
         - pyqt
     run:
         - python
         - numpy
-        - gdal 2.0.2
+        - gdal 2.1.*
         - pyqt
 
 test:
