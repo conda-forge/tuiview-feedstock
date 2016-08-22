@@ -16,12 +16,14 @@ requirements:
     build:
         - python
         - numpy
-        - gdal
+        - gdal 2.1.*  # [unix]
+        - gdal 2.0.2  # [win]
         - pyqt
     run:
         - python
         - numpy
-        - gdal
+        - gdal 2.1.*  # [unix]
+        - gdal 2.0.2  # [win]
         - pyqt
 
 test:
