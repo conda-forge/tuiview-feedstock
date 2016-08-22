@@ -20,13 +20,13 @@ build:
 requirements:
     build:
         - python
-        - numpy
+        - numpy x.x
         - gdal 2.1.*  # [unix]
         - gdal 2.0.2  # [win]
         - pyqt
     run:
         - python
-        - numpy
+        - numpy x.x
         - gdal 2.1.*  # [unix]
         - gdal 2.0.2  # [win]
         - pyqt
