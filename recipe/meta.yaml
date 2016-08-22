@@ -11,6 +11,8 @@ source:
 
 build:
     number: 0
+    # PyQt not available for py35 yet
+    skip: True  # [win and py35]
     entry_points:
         - tuiview = tuiview.viewerapplication:run
         - tuiviewwritetable = tuiview.writetableapplication:run
