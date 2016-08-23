@@ -1,27 +1,32 @@
-{% set version = "1.1.8" %}
+{% set version = "1.1.9" %}
 
 package:
     name: tuiview
     version: {{ version }}
 
 source:
-    fn: TuiView-{{ version }}.zip
-    url: https://bitbucket.org/chchrsc/tuiview/downloads/TuiView-{{ version }}.zip
-    md5: e41c7641d709b7e2e51231077712b384
+    fn: TuiView-{{ version }}.tar.gz
+    url: https://bitbucket.org/chchrsc/tuiview/downloads/TuiView-{{ version }}.tar.gz
+    md5: 7d0fd3a03ebbe5bd6a2fd5e49f5b70ba
 
 build:
-    number: 1
+    number: 0
+    # PyQt not available for py35 yet
+    skip: True  # [win and py35]
+    entry_points:
+        - tuiview = tuiview.viewerapplication:run
+        - tuiviewwritetable = tuiview.writetableapplication:run
 
 requirements:
     build:
         - python
-        - numpy
+        - numpy x.x
         - gdal 2.1.*  # [unix]
         - gdal 2.0.2  # [win]
         - pyqt
     run:
         - python
-        - numpy
+        - numpy x.x
         - gdal 2.1.*  # [unix]
         - gdal 2.0.2  # [win]
         - pyqt
@@ -38,3 +43,4 @@ about:
 extra:
     recipe-maintainers:
         - gillins
+        - danclewley
