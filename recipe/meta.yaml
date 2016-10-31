@@ -11,8 +11,7 @@ source:
 
 build:
     number: 2
-    # PyQt not available for py35 yet
-    skip: True  # [win and py35]
+    skip: True  # [win]
     entry_points:
         - tuiview = tuiview.viewerapplication:run
         - tuiviewwritetable = tuiview.writetableapplication:run
@@ -21,14 +20,12 @@ requirements:
     build:
         - python
         - numpy x.x
-        - gdal 2.1.*  # [unix]
-        - gdal 2.0.2  # [win]
+        - gdal 2.1.*
         - pyqt 4.11.*
     run:
         - python
         - numpy x.x
-        - gdal 2.1.*  # [unix]
-        - gdal 2.0.2  # [win]
+        - gdal 2.1.*
         - pyqt 4.11.*
 
 test:
