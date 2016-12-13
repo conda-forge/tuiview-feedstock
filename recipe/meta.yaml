@@ -10,7 +10,7 @@ source:
     md5: 7d0fd3a03ebbe5bd6a2fd5e49f5b70ba
 
 build:
-    number: 2
+    number: 3
     entry_points:
         - tuiview = tuiview.viewerapplication:run
         - tuiviewwritetable = tuiview.writetableapplication:run
