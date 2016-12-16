@@ -11,6 +11,18 @@ Summary: Simple raster viewer. Supports Geolinked Windows, Raster Attribute Quer
 
 
 
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/tuiview-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/tuiview-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/tuiview-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/tuiview-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/tuiview-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/tuiview-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/tuiview/badges/version.svg)](https://anaconda.org/conda-forge/tuiview)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/tuiview/badges/downloads.svg)](https://anaconda.org/conda-forge/tuiview)
+
 Installing tuiview
 ==================
 
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `tuiview` available on your platfo
 ```
 conda search tuiview --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/tuiview-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/tuiview-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/tuiview-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/tuiview-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/tuiview/badges/version.svg)](https://anaconda.org/conda-forge/tuiview)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/tuiview/badges/downloads.svg)](https://anaconda.org/conda-forge/tuiview)
 
 
 Updating tuiview-feedstock
