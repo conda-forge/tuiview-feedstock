@@ -11,7 +11,7 @@ source:
     sha256: 4657ec81466d2ca4bfa55792941afd46de26f34f5cc46b3b58b8949413f0b3c2
 
 build:
-    number: 0
+    number: 1
     entry_points:
         - tuiview = tuiview.viewerapplication:run
         - tuiviewwritetable = tuiview.writetableapplication:run
@@ -20,12 +20,12 @@ requirements:
     build:
         - python
         - numpy x.x
-        - gdal 2.1.*
+        - gdal 2.2.*
         - pyqt 4.11.*
     run:
         - python
         - numpy x.x
-        - gdal 2.1.*
+        - gdal 2.2.*
         - pyqt 4.11.*
 
 test:
