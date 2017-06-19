@@ -1,4 +1,4 @@
-{% set version = "1.1.11" %}
+{% set version = "1.1.12" %}
 
 
 package:
@@ -8,10 +8,10 @@ package:
 source:
     fn: TuiView-{{ version }}.tar.gz
     url: https://bitbucket.org/chchrsc/tuiview/downloads/TuiView-{{ version }}.tar.gz
-    sha256: 4657ec81466d2ca4bfa55792941afd46de26f34f5cc46b3b58b8949413f0b3c2
+    sha256: ff42503f405ea4a02efab8becf72a557cefc0ce775710cd9ce4ff2158b066cb4
 
 build:
-    number: 1
+    number: 0
     entry_points:
         - tuiview = tuiview.viewerapplication:run
         - tuiviewwritetable = tuiview.writetableapplication:run
