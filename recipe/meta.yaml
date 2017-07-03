@@ -1,4 +1,4 @@
-{% set version = "1.1.12" %}
+{% set version = "1.2.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 source:
     fn: TuiView-{{ version }}.tar.gz
     url: https://bitbucket.org/chchrsc/tuiview/downloads/TuiView-{{ version }}.tar.gz
-    sha256: ff42503f405ea4a02efab8becf72a557cefc0ce775710cd9ce4ff2158b066cb4
+    sha256: 1340136787f29b1f9146cf4819f7d44fffc8887707c42e78c79b7c7c9f6ba4e2
 
 build:
     number: 0
@@ -21,12 +21,12 @@ requirements:
         - python
         - numpy x.x
         - gdal 2.2.*
-        - pyqt 4.11.*
+        - pyqt 5.6.*
     run:
         - python
         - numpy x.x
         - gdal 2.2.*
-        - pyqt 4.11.*
+        - pyqt 5.6.*
 
 test:
     imports:
