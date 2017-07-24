@@ -3,7 +3,7 @@ About tuiview
 
 Home: http://tuiview.org/
 
-Package license: GPLv2
+Package license: GPL-2.0
 
 Feedstock license: BSD 3-Clause
 
