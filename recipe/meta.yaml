@@ -1,43 +1,52 @@
 {% set version = "1.2.0" %}
 
-
 package:
-    name: tuiview
-    version: {{ version }}
+  name: tuiview
+  version: {{ version }}
 
 source:
-    fn: TuiView-{{ version }}.tar.gz
-    url: https://bitbucket.org/chchrsc/tuiview/downloads/TuiView-{{ version }}.tar.gz
-    sha256: 1340136787f29b1f9146cf4819f7d44fffc8887707c42e78c79b7c7c9f6ba4e2
+  fn: TuiView-{{ version }}.tar.gz
+  url: https://bitbucket.org/chchrsc/tuiview/downloads/TuiView-{{ version }}.tar.gz
+  sha256: 1340136787f29b1f9146cf4819f7d44fffc8887707c42e78c79b7c7c9f6ba4e2
 
 build:
-    number: 0
-    entry_points:
-        - tuiview = tuiview.viewerapplication:run
-        - tuiviewwritetable = tuiview.writetableapplication:run
+  number: 0
+  entry_points:
+    - tuiview = tuiview.viewerapplication:run
+    - tuiviewwritetable = tuiview.writetableapplication:run
 
 requirements:
-    build:
-        - python
-        - numpy x.x
-        - gdal 2.2.*
-        - pyqt 5.6.*
-    run:
-        - python
-        - numpy x.x
-        - gdal 2.2.*
-        - pyqt 5.6.*
+  build:
+    - python
+    - numpy 1.7.*  # [py27]
+    - numpy 1.9.*  # [py35]
+    - numpy 1.11.*  # [py36]
+    - gdal
+    - pyqt 5.6.*
+  run:
+    - python
+    - numpy >=1.7  # [py27]
+    - numpy >=1.9  # [py35]
+    - numpy >=1.11  # [py36]
+    - gdal
+    - pyqt 5.6.*
 
 test:
-    imports:
-        - tuiview
+  imports:
+    - tuiview
+  commands:
+    - tuiviewwritetable -h
+    - conda inspect linkages -p $PREFIX tuiview  # [not win]
+    - conda inspect objects -p $PREFIX tuiview  # [osx]
 
 about:
-    home: http://tuiview.org/
-    license: GPLv2
-    summary: Simple raster viewer. Supports Geolinked Windows, Raster Attribute Querying and Editing and Geographic Selection, Vector Overlay, Flicker, Profile Tool. 
+  home: http://tuiview.org/
+  license: GPL-2.0
+  # Not present in the tarball.
+  # license_file: LICENSE.txt
+  summary: Simple raster viewer. Supports Geolinked Windows, Raster Attribute Querying and Editing and Geographic Selection, Vector Overlay, Flicker, Profile Tool.
 
 extra:
-    recipe-maintainers:
-        - gillins
-        - danclewley
+  recipe-maintainers:
+    - gillins
+    - danclewley
