@@ -18,16 +18,16 @@ build:
 requirements:
   build:
     - python
-    - numpy 1.7.*  # [py27]
-    - numpy 1.9.*  # [py35]
-    - numpy 1.11.*  # [py36]
+    - numpy 1.8.*  # [not (win and (py35 or py36))]
+    - numpy 1.9.*  # [win and py35]
+    - numpy 1.11.*  # [win and py36]    
     - gdal 2.1.*
     - pyqt 5.6.*
   run:
     - python
-    - numpy >=1.7  # [py27]
-    - numpy >=1.9  # [py35]
-    - numpy >=1.11  # [py36]
+    - numpy >=1.8  # [not (win and (py35 or py36))]
+    - numpy >=1.9  # [win and py35]
+    - numpy >=1.11  # [win and py36]    
     - gdal 2.1.*
     - pyqt 5.6.*
 
