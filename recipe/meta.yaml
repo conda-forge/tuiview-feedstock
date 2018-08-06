@@ -5,7 +5,6 @@ package:
   version: {{ version }}
 
 source:
-  fn: TuiView-{{ version }}.tar.gz
   url: https://bitbucket.org/chchrsc/tuiview/downloads/TuiView-{{ version }}.tar.gz
   sha256: 6c63ae83a7e845b5f96316cdb7d7007e1c74158e47e2a75d8dcc5a22e24e1c31
 
