@@ -5,31 +5,33 @@ package:
   version: {{ version }}
 
 source:
-  fn: TuiView-{{ version }}.tar.gz
   url: https://bitbucket.org/chchrsc/tuiview/downloads/TuiView-{{ version }}.tar.gz
   sha256: 6c63ae83a7e845b5f96316cdb7d7007e1c74158e47e2a75d8dcc5a22e24e1c31
 
 build:
-  number: 1
+  number: 2
+  script:
+    - set TUIVIEW_NOCMDLINE=1  # [win]
+    - set GDAL_HOME=%LIBRARY_PREFIX%  # [win]
+    - export TUIVIEW_NOCMDLINE=1  # [not win]
+    - "{{ PYTHON }} setup.py install"
   entry_points:
     - tuiview = tuiview.viewerapplication:run
     - tuiviewwritetable = tuiview.writetableapplication:run
 
 requirements:
   build:
+    - {{ compiler('c') }}
+  host:
     - python
-    - numpy 1.8.*  # [not (win and (py35 or py36))]
-    - numpy 1.9.*  # [win and py35]
-    - numpy 1.11.*  # [win and py36]    
-    - gdal 2.2.*
-    - pyqt 5.6.*
+    - numpy
+    - gdal
+    - pyqt
   run:
     - python
-    - numpy >=1.8  # [not (win and (py35 or py36))]
-    - numpy >=1.9  # [win and py35]
-    - numpy >=1.11  # [win and py36]    
-    - gdal 2.2.*
-    - pyqt 5.6.*
+    - {{ pin_compatible('numpy') }}
+    - gdal
+    - pyqt
 
 test:
   imports:
