@@ -10,6 +10,11 @@ source:
 
 build:
   number: 2
+  script:
+    - set TUIVIEW_NOCMDLINE=1  # [win]
+    - set GDAL_HOME=%LIBRARY_PREFIX%  # [win]
+    - export TUIVIEW_NOCMDLINE=1  # [not win]
+    - "{{ PYTHON }} setup.py install"
   entry_points:
     - tuiview = tuiview.viewerapplication:run
     - tuiviewwritetable = tuiview.writetableapplication:run
