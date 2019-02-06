@@ -23,12 +23,6 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - {{ cdt('mesa-libgl-devel') }}  # [linux]
-    - {{ cdt('mesa-dri-drivers') }}  # [linux]
-    - {{ cdt('libselinux') }}  # [linux]
-    - {{ cdt('libxdamage') }}  # [linux]
-    - {{ cdt('libxfixes') }}  # [linux]
-    - {{ cdt('libxxf86vm') }}  # [linux
   host:
     - python
     - numpy
@@ -41,6 +35,13 @@ requirements:
     - pyqt
 
 test:
+  requires:
+    - {{ cdt('mesa-libgl-devel') }}  # [linux]
+    - {{ cdt('mesa-dri-drivers') }}  # [linux]
+    - {{ cdt('libselinux') }}  # [linux]
+    - {{ cdt('libxdamage') }}  # [linux]
+    - {{ cdt('libxfixes') }}  # [linux]
+    - {{ cdt('libxxf86vm') }}  # [linux
   imports:
     - tuiview
     # make sure we can import the C extension
