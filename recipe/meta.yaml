@@ -9,7 +9,7 @@ source:
   sha256: a1d4551c3a5e703ac8dad319e933df4ee46d199b656be25da333a8c00d6d8861
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win and vc<14]
   script:
     - set TUIVIEW_NOCMDLINE=1  # [win]
