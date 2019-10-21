@@ -1,4 +1,4 @@
-{% set version = "1.2.4" %}
+{% set version = "1.2.5" %}
 
 package:
   name: tuiview
@@ -6,10 +6,11 @@ package:
 
 source:
   url: https://bitbucket.org/chchrsc/tuiview/downloads/TuiView-{{ version }}.tar.gz
-  sha256: a1d4551c3a5e703ac8dad319e933df4ee46d199b656be25da333a8c00d6d8861
+  # appears to be untarred?
+  sha256: 10f25c7dd75b2ddafd6bb845c744fe98ea633ef3f988e2578155ddf421171352
 
 build:
-  number: 2
+  number: 0
   skip: True  # [win and vc<14]
   script:
     - set TUIVIEW_NOCMDLINE=1  # [win]
