@@ -6,7 +6,8 @@ package:
 
 source:
   url: https://bitbucket.org/chchrsc/tuiview/downloads/TuiView-{{ version }}.tar.gz
-  sha256: 38fb64cae197e53b5757b56ea1dad64574d54aaadc341728b778853c77ff6122
+  # appears to be untarred?
+  sha256: 10f25c7dd75b2ddafd6bb845c744fe98ea633ef3f988e2578155ddf421171352
 
 build:
   number: 0
