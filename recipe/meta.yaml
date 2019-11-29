@@ -1,13 +1,12 @@
-{% set version = "1.2.5" %}
+{% set version = "1.2.6" %}
 
 package:
   name: tuiview
   version: {{ version }}
 
 source:
-  url: https://bitbucket.org/chchrsc/tuiview/downloads/TuiView-{{ version }}.tar.gz
-  # appears to be untarred?
-  sha256: 10f25c7dd75b2ddafd6bb845c744fe98ea633ef3f988e2578155ddf421171352
+  url: https://github.com/ubarsc/tuiview/releases/download/tuiview-{{ version }}/TuiView-{{ version }}.tar.gz
+  sha256: 61b136fa31c949d7a7a4dbf8562e6fc677d5b1845b152ec39e337f4eb2e91662
 
 build:
   number: 0
