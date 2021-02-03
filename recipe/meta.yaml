@@ -9,7 +9,7 @@ source:
   sha256: 61b136fa31c949d7a7a4dbf8562e6fc677d5b1845b152ec39e337f4eb2e91662
 
 build:
-  number: 2
+  number: 3
   skip: True  # [win and vc<14]
   script:
     - set TUIVIEW_NOCMDLINE=1  # [win]
@@ -41,8 +41,6 @@ test:
     - tuiview.vectorrasterizer
   commands:
     - tuiviewwritetable -h
-    - conda inspect linkages -p $PREFIX tuiview  # [not win]
-    - conda inspect objects -p $PREFIX tuiview  # [osx]
 
 about:
   home: http://tuiview.org/
