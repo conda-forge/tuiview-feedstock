@@ -3,7 +3,7 @@ About tuiview
 
 Home: http://tuiview.org/
 
-Package license: GPL-2.0
+Package license: GPL-2.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tuiview-feedstock/blob/master/LICENSE.txt)
 

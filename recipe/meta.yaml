@@ -1,4 +1,4 @@
-{% set version = "1.2.6" %}
+{% set version = "1.2.7" %}
 
 package:
   name: tuiview
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/ubarsc/tuiview/releases/download/tuiview-{{ version }}/TuiView-{{ version }}.tar.gz
-  sha256: 61b136fa31c949d7a7a4dbf8562e6fc677d5b1845b152ec39e337f4eb2e91662
+  sha256: 35dfeb79b2bb57dfb5b8c90c3edf8c8a0a3f89cef85c33f9935e4a4add282aaf
 
 build:
-  number: 3
+  number: 0
   skip: True  # [win and vc<14]
   script:
     - set TUIVIEW_NOCMDLINE=1  # [win]
@@ -44,7 +44,7 @@ test:
 
 about:
   home: http://tuiview.org/
-  license: GPL-2.0
+  license: GPL-2.0-only
   license_file: LICENSE.txt
   summary: Simple raster viewer. Supports Geolinked Windows, Raster Attribute Querying and Editing and Geographic Selection, Vector Overlay, Flicker, Profile Tool.
 
