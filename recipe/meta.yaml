@@ -1,4 +1,4 @@
-{% set version = "1.2.7" %}
+{% set version = "1.2.8" %}
 
 package:
   name: tuiview
@@ -6,16 +6,16 @@ package:
 
 source:
   url: https://github.com/ubarsc/tuiview/releases/download/tuiview-{{ version }}/TuiView-{{ version }}.tar.gz
-  sha256: 35dfeb79b2bb57dfb5b8c90c3edf8c8a0a3f89cef85c33f9935e4a4add282aaf
+  sha256: e75950908a2d1f7c7216dfeead82483e1d3b0267fff9561549d85ca00725456b
 
 build:
-  number: 2
-  skip: True  # [win and vc<14]
+  number: 0
+  skip: true  # [win and vc<14]
   script:
     - set TUIVIEW_NOCMDLINE=1  # [win]
     - set GDAL_HOME=%LIBRARY_PREFIX%  # [win]
     - export TUIVIEW_NOCMDLINE=1  # [not win]
-    - "{{ PYTHON }} setup.py install"
+    - {{ PYTHON }} setup.py install
   entry_points:
     - tuiview = tuiview.viewerapplication:run
     - tuiviewwritetable = tuiview.writetableapplication:run
