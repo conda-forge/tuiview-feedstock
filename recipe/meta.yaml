@@ -27,7 +27,7 @@ requirements:
     - python
     - numpy
     - gdal
-    - ligdal
+    - libgdal
     - pyqt
   run:
     - python
