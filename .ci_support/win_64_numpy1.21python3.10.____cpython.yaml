@@ -6,6 +6,8 @@ channel_targets:
 - conda-forge main
 gdal:
 - '3.5'
+libgdal:
+- '3.5'
 numpy:
 - '1.21'
 pin_run_as_build:
