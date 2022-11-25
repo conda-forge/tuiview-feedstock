@@ -27,11 +27,13 @@ requirements:
     - python
     - numpy
     - gdal
+    # necessary because of the C extension
     - libgdal
     - pyqt
   run:
     - python
     - {{ pin_compatible('numpy') }}
+    # necessary because of the C extension
     - gdal
     - libgdal
     - pyqt
