@@ -7,9 +7,11 @@ package:
 source:
   url: https://github.com/ubarsc/tuiview/releases/download/tuiview-{{ version }}/TuiView-{{ version }}.tar.gz
   sha256: 5ea777a4e89780488b03b346f00b586b46a0bd4c8a994e6def46a6494fa486ef
+  patches:
+    - gdal_i.patch  # [win]
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win and vc<14]
   script:
     - set TUIVIEW_NOCMDLINE=1  # [win]

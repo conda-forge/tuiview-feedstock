@@ -9,9 +9,9 @@ channel_sources:
 channel_targets:
 - conda-forge main
 gdal:
-- '3.5'
+- '3.6'
 libgdal:
-- '3.5'
+- '3.6'
 macos_machine:
 - x86_64-apple-darwin13.4.0
 numpy:
