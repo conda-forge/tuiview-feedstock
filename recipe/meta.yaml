@@ -13,7 +13,7 @@ build:
   skip: true  # [win and vc<14]
   script:
     - set GDAL_HOME=%LIBRARY_PREFIX%  # [win]
-    - {{ PYTHON }} -m pip install . -vv
+    - "{{ PYTHON }} -m pip install . -vv"
   entry_points:
     - tuiview = tuiview.viewerapplication:run
     - tuiviewwritetable = tuiview.writetableapplication:run
