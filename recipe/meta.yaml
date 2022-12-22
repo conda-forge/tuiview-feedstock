@@ -7,8 +7,6 @@ package:
 source:
   url: https://github.com/ubarsc/tuiview/releases/download/tuiview-{{ version }}/TuiView-{{ version }}.tar.gz
   sha256: 81f870ad98ec1e3175f25028d261135b6198fa85038bfaa900789e04e3cf8517
-  patches:
-    - gdal_i.patch  # [win]
 
 build:
   number: 0
@@ -27,6 +25,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
+    - setuptools
     - numpy
     - gdal
     # necessary because of the C extension
