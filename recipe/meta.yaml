@@ -12,10 +12,8 @@ build:
   number: 0
   skip: true  # [win and vc<14]
   script:
-    - set TUIVIEW_NOCMDLINE=1  # [win]
     - set GDAL_HOME=%LIBRARY_PREFIX%  # [win]
-    - export TUIVIEW_NOCMDLINE=1  # [not win]
-    - {{ PYTHON }} setup.py install
+    - {{ PYTHON }} -m pip install . -vv
   entry_points:
     - tuiview = tuiview.viewerapplication:run
     - tuiviewwritetable = tuiview.writetableapplication:run
