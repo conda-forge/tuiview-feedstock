@@ -23,6 +23,7 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
+    - pip
     - numpy
     - gdal
     # necessary because of the C extension
