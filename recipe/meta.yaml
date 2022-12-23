@@ -9,7 +9,7 @@ source:
   sha256: 81f870ad98ec1e3175f25028d261135b6198fa85038bfaa900789e04e3cf8517
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
   script:
     - set GDAL_HOME=%LIBRARY_PREFIX%  # [win]
@@ -21,6 +21,8 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - python  # [build_platform != target_platform]
+    - numpy   # [build_platform != target_platform]
   host:
     - python
     - pip
