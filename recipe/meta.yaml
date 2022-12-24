@@ -7,6 +7,9 @@ package:
 source:
   url: https://github.com/ubarsc/tuiview/releases/download/tuiview-{{ version }}/TuiView-{{ version }}.tar.gz
   sha256: 81f870ad98ec1e3175f25028d261135b6198fa85038bfaa900789e04e3cf8517
+  patches:
+    # gdal isn't available in the cross compile env
+    - removeimportgdaltest.patch  # [build_platform != target_platform]
 
 build:
   number: 1
@@ -24,7 +27,6 @@ requirements:
     - python                                # [build_platform != target_platform]
     - cross-python_{{ target_platform }}    # [build_platform != target_platform]
     - numpy                                 # [build_platform != target_platform]
-    - setuptools                            # [build_platform != target_platform]
   host:
     - python
     - pip
