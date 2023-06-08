@@ -12,7 +12,7 @@ source:
     - removeimportgdaltest.patch  # [build_platform != target_platform]
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win and vc<14]
   script:
     - set GDAL_HOME=%LIBRARY_PREFIX%  # [win]
