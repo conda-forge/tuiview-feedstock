@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/ubarsc/tuiview/releases/download/tuiview-{{ version }}/TuiView-{{ version }}.tar.gz
-  sha256: 53127dd0fb76932336b60dc8189b281e0d254b1f14f61147644a9a028d11535f
+  sha256: 48c8d4175c324f70941dc49c5a119882c9d501bd20bc13c76bc2455dee5236a5
 
 build:
   number: 0
