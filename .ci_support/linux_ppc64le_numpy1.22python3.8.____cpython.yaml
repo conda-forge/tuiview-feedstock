@@ -15,7 +15,7 @@ gdal:
 libgdal:
 - '3.7'
 numpy:
-- '1.21'
+- '1.22'
 pin_run_as_build:
   python:
     min_pin: x.x
