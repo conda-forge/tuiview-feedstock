@@ -5,9 +5,9 @@ channel_sources:
 channel_targets:
 - conda-forge main
 gdal:
-- '3.7'
+- '3.8'
 libgdal:
-- '3.7'
+- '3.8'
 numpy:
 - '1.22'
 pin_run_as_build:
