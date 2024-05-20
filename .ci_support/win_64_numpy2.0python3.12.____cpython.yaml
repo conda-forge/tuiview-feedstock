@@ -1,7 +1,9 @@
 c_compiler:
 - vs2019
+c_stdlib:
+- vs
 channel_sources:
-- conda-forge
+- conda-forge/label/numpy_rc,conda-forge
 channel_targets:
 - conda-forge main
 gdal:
@@ -9,7 +11,7 @@ gdal:
 libgdal:
 - '3.8'
 numpy:
-- '1.23'
+- '2.0'
 pin_run_as_build:
   python:
     min_pin: x.x
@@ -17,7 +19,7 @@ pin_run_as_build:
 pyqt:
 - '5.15'
 python:
-- 3.11.* *_cpython
+- 3.12.* *_cpython
 target_platform:
 - win-64
 vc:
