@@ -10,7 +10,7 @@ source:
 
 build:
   number: 3
-  skip: true  # [win and vc<14]
+  skip: true  # [(win and vc<14) or ppc64le]
   script:
     - set GDAL_HOME=%LIBRARY_PREFIX%  # [win]
     - "{{ PYTHON }} -m pip install . -vv"
