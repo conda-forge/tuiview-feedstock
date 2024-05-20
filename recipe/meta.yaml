@@ -9,7 +9,7 @@ source:
   sha256: 48c8d4175c324f70941dc49c5a119882c9d501bd20bc13c76bc2455dee5236a5
 
 build:
-  number: 2
+  number: 3
   skip: true  # [win and vc<14]
   script:
     - set GDAL_HOME=%LIBRARY_PREFIX%  # [win]
@@ -21,6 +21,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - python                                # [build_platform != target_platform]
     - cross-python_{{ target_platform }}    # [build_platform != target_platform]
     - numpy                                 # [build_platform != target_platform]
@@ -34,7 +35,6 @@ requirements:
     - pyqt
   run:
     - python
-    - {{ pin_compatible('numpy') }}
     # necessary because of the C extension
     - gdal
     - libgdal
