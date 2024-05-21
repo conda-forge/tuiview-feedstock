@@ -1,4 +1,4 @@
-{% set version = "1.2.13" %}
+{% set version = "1.2.14" %}
 
 package:
   name: tuiview
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/ubarsc/tuiview/releases/download/tuiview-{{ version }}/TuiView-{{ version }}.tar.gz
-  sha256: 48c8d4175c324f70941dc49c5a119882c9d501bd20bc13c76bc2455dee5236a5
+  sha256: 80cf4ac607b37bb9d7348b3d40e1e18910323f7ad47e79ae850cbb4750775f7c
 
 build:
-  number: 3
+  number: 0
   skip: true  # [(win and vc<14) or ppc64le]
   script:
     - set GDAL_HOME=%LIBRARY_PREFIX%  # [win]
