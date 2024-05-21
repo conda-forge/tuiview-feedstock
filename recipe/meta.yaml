@@ -9,7 +9,7 @@ source:
   sha256: 80cf4ac607b37bb9d7348b3d40e1e18910323f7ad47e79ae850cbb4750775f7c
 
 build:
-  number: 0
+  number: 1
   skip: true  # [(win and vc<14) or ppc64le]
   script:
     - set GDAL_HOME=%LIBRARY_PREFIX%  # [win]
