@@ -15,9 +15,9 @@ channel_targets:
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
 gdal:
-- '3.8'
+- '3.9'
 libgdal:
-- '3.8'
+- '3.9'
 numpy:
 - '2.0'
 pin_run_as_build:
