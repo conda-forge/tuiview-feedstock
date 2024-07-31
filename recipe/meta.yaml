@@ -27,6 +27,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
     - numpy
     - gdal
     # necessary because of the C extension
