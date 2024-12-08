@@ -32,13 +32,13 @@ requirements:
     - gdal
     # necessary because of the C extension
     - libgdal
-    - pyqt
+    - pyside6
   run:
     - python
-    # necessary because of the C extension
     - gdal
+    # necessary because of the C extension
     - libgdal
-    - pyqt
+    - pyside6
 
 test:
   imports:
