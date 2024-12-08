@@ -10,6 +10,8 @@ source:
 
 build:
   number: 0
+  # PySide6 not available for ppc64le yet
+  skip: True  # [ppc64le]
   script:
     - set GDAL_HOME=%LIBRARY_PREFIX%  # [win]
     - "{{ PYTHON }} -m pip install . -vv"
