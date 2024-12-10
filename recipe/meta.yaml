@@ -9,7 +9,7 @@ source:
   sha256: acea6ff07a74a6c161d335e270251990dea977217c1a490da359f8c3aa130ac5
 
 build:
-  number: 0
+  number: 1
   # PySide6 not available for ppc64le yet
   skip: True  # [ppc64le]
   script:
