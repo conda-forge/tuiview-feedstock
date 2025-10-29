@@ -1,4 +1,4 @@
-{% set version = "1.3.4" %}
+{% set version = "1.3.5" %}
 
 package:
   name: tuiview
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/ubarsc/tuiview/releases/download/tuiview-{{ version }}/TuiView-{{ version }}.tar.gz
-  sha256: b3872540ccfa30bc8e16c2e6fbcf582b0945b308ba6bbd74b9a0f19a9b759604
+  sha256: ccb1366a20bc807e25c092d4a48520c347287a75afcd23684bf74879fc48397e
 
 build:
   number: 0
