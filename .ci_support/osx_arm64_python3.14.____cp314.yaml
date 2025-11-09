@@ -15,9 +15,9 @@ channel_sources:
 channel_targets:
 - conda-forge main
 gdal:
-- '3.11'
+- '3.12'
 libgdal:
-- '3.11'
+- '3.12'
 macos_machine:
 - arm64-apple-darwin20.0.0
 numpy:
