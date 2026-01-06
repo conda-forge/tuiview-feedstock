@@ -1,4 +1,4 @@
-{% set version = "1.3.5" %}
+{% set version = "1.3.6" %}
 
 package:
   name: tuiview
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/ubarsc/tuiview/releases/download/tuiview-{{ version }}/TuiView-{{ version }}.tar.gz
-  sha256: ccb1366a20bc807e25c092d4a48520c347287a75afcd23684bf74879fc48397e
+  sha256: bb3c810fbb33fa216de5f30e2f81eb91ab38a0b7fee07f6845b5ae2d4cea3051
 
 build:
-  number: 1
+  number: 0
   # PySide6 not available for ppc64le yet
   skip: true  # [ppc64le]
   script:
